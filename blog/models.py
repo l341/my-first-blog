@@ -10,6 +10,7 @@ from django.utils import timezone
 class Post(models.Model):
 
     # Relacion (link) con otro modelo
+    # on_delete=models.CASCADE -> si se borra el usuario se borra toda la info relacionada con el
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 
     # Define texto con un numero limitado de caracteres
