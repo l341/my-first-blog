@@ -7,4 +7,5 @@ from . import views
 # name='post_list' ->  nombre de la URL que se utilizara para identificar a la vista
 urlpatterns = [
     path('', views.post_list, name='post_list'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
 ]
